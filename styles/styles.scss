@@ -151,7 +151,7 @@ a {
 
         &--portfolio {
             width: 90%;
-            height: 100%;
+            height: auto;
 
             &_item {
                 width: 100%;
@@ -171,9 +171,17 @@ a {
                 }
             }
         }
-    }
 
-    .portfolio {
-        height: auto;
+        &--contact {
+            width: 90%;
+
+            &_form {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
     }
 }
