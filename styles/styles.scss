@@ -279,6 +279,110 @@ a {
     flex-direction: row-reverse;
 }
 
+.contact {
+    @extend .title;
+
+    &__container {
+        width: 100%;
+        margin-bottom: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--heading {
+            text-align: center;
+
+            & h2 {
+                @extend %heading;
+                font-size: 60px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &--form {
+            width: 80vw;
+            max-width: 500px;
+            margin-bottom: 5vh;
+            /*when I add this the below shrinks?*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & label {
+                width: 100%;
+                @extend %main_text;
+                font-size: 15px;
+            }
+
+            & input {
+                width: 100%;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 0.5px solid rgb(0, 0, 0, 0.5);
+
+                &::placeholder {
+                    @extend %main_text;
+                    font-size: 12px;
+                }
+            }
+
+            & textarea {
+                width: 100%;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border: 0.5px solid rgb(0, 0, 0, 0.5);
+                background-color: transparent;
+
+                &::placeholder {
+                    @extend %main_text;
+                    font-size: 12px;
+                }
+            }
+
+            & button {
+                border: none;
+                background-color: #f0f0f0;
+                @extend %main_text;
+                font-size: 15px;
+                padding: 10px 15px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+                &:hover {
+                    background-color: pink;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.some_links {
+    width: 100px;
+    text-align: center;
+
+    & a {
+        font-size: 20px;
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: pink;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    @extend %main_text;
+    font-size: 10px;
+    color: grey;
+}
+
 
 /*.section {
     width: 100%;
