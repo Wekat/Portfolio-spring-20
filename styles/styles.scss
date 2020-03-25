@@ -354,6 +354,8 @@ a {
                 border: none;
                 background-color: transparent;
                 border-bottom: 0.5px solid rgb(0, 0, 0, 0.5);
+                @extend %main_text;
+                font-size: 12px;
 
                 &::placeholder {
                     @extend %main_text;
@@ -369,6 +371,7 @@ a {
                 border: 0.5px solid rgb(0, 0, 0, 0.5);
                 background-color: transparent;
                 padding: 10px;
+                box-sizing: border-box;
 
                 &::placeholder {
                     @extend %main_text;
@@ -391,6 +394,11 @@ a {
             }
         }
     }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
 }
 
 .some_links {
@@ -422,108 +430,3 @@ a {
         margin-right: 5px;
     }
 }
-
-
-/*.section {
-    width: 100%;
-    height: auto;
-
-    &__container {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &--titel {
-            margin-left: auto;
-            margin-right: auto;
-            
-        }
-
-        &--bio {
-            height: 100%;
-            width: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
-            &_img {
-                max-height: 600px;
-                height: 100%;
-                width: auto;
-
-                & img {
-                    height: 100%;
-                    width: auto;
-                    overflow: hidden;
-                }
-            }
-
-            &_txt {
-                margin-left: 5%;
-            }
-        }
-
-        &--skills {
-            width: 90%;
-
-            &_item {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-
-                &_subject {
-                    max-width: 200px;
-                    width: 100%;
-                }
-
-                &_progress { /*need to remove and add each skill separately, this is just for test*//*
-                    width: 100%;
-                    height: 4px;
-                    border-radius: 2px;
-                    background-color: rgb(0,0,0);
-                }
-            }
-        }
-
-        &--portfolio {
-            width: 90%;
-            height: auto;
-
-            &_item {
-                width: 100%;
-                height: 70vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &_img {
-                    max-width: 640px;
-                    width: 100%;
-                    max-height: 800px;
-                    height: 70%;
-                    min-height: 100px;
-                    background-image: url(../images/placeholderproject.jpg); /*need to do this separately for each item later*//*
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-            }
-        }
-
-        &--contact {
-            width: 90%;
-
-            &_form {
-                display: flex;
-                flex-direction: column;
-                box-sizing: border-box;
-                justify-content: space-around;
-                align-items: center;
-            }
-        }
-    }
-}*/
