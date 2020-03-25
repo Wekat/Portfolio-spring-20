@@ -29,7 +29,7 @@ a {
     top: 0;
     right: 0;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.8);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -49,15 +49,15 @@ a {
     margin-right: auto;
     padding: 8px;
     text-decoration: none;
-    font-family: Source Sans Pro;
+    font-family: 'Quicksand', sans-serif;
     font-size: 36px;
-    color: #818181;
+    color: #f3f3f3;
     display: block;
     transition: 0.3s;
 }
   
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: pink;
 }
   
 .overlay .closebtn {
@@ -84,6 +84,11 @@ a {
         margin-right: 20px;
         @extend %main_text;
         color: rgb(0,0,0);
+
+        &:hover {
+            color: pink;
+            font-weight: bold;
+        }
     }
 }
 
@@ -104,7 +109,7 @@ a {
     &__container {
         width: 100%;
         text-align: center;
-        margin-bottom: 40vh;
+        margin-bottom: 30vh;
 
         & h1 {
             @extend %heading;
@@ -130,7 +135,8 @@ a {
     &__container {
         width: 100%;
         height: 80vh;
-        margin-bottom: 30vh;
+        margin-bottom: 15vh;
+        padding-top: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -168,7 +174,8 @@ a {
 
     &__container {
         width: 100%;
-        margin-bottom: 30vh;
+        margin-bottom: 23vh;
+        padding-top: 15vh;
         
         &--heading {
             margin-bottom: 30px;
@@ -209,7 +216,8 @@ a {
 
     &__container {
         width: 100%;
-        margin-bottom: 30vh;
+        margin-bottom: 15vh;
+        padding-top: 15vh;
 
         &--heading {
             text-align: right;
@@ -284,6 +292,7 @@ a {
 
     &__container {
         width: 100%;
+        padding-top: 7vh;
         margin-bottom: 10vh;
         display: flex;
         flex-direction: column;
