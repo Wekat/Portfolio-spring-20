@@ -21,8 +21,11 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 .overlay {
@@ -96,9 +99,22 @@ a {
     }
 }
 
+.my_name {
+    position: absolute;
+    right: 25px;
+    top: 57px;
+
+    & h2 {
+        @extend %main_text;
+        font-size: 20px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+}
+
 .content {
     height: 90vh;
-    margin-right: 68px;
+    width: calc(100% - 68px);
     background-color: rgb(255, 255, 255, 0.8);
     padding-top: 40vh;
     overflow-y: scroll;
@@ -321,6 +337,10 @@ a {
             flex-direction: column;
             align-items: center;
 
+            & form {
+                width: 100%;
+            }
+
             & label {
                 width: 100%;
                 @extend %main_text;
@@ -348,6 +368,7 @@ a {
                 margin-bottom: 15px;
                 border: 0.5px solid rgb(0, 0, 0, 0.5);
                 background-color: transparent;
+                padding: 10px;
 
                 &::placeholder {
                     @extend %main_text;
@@ -395,6 +416,11 @@ a {
     @extend %main_text;
     font-size: 10px;
     color: grey;
+    margin-bottom: 10px;
+
+    & i {
+        margin-right: 5px;
+    }
 }
 
 
