@@ -26,6 +26,11 @@ a {
     position: relative;
     box-sizing: border-box;
     overflow-y: hidden;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .overlay {
@@ -118,6 +123,11 @@ a {
     background-color: rgb(255, 255, 255, 0.8);
     padding-top: 40vh;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .title {
