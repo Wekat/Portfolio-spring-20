@@ -1,6 +1,7 @@
 
 a {
     text-decoration: none;
+    color: rgb(0,0,0);
 }
 
 %heading {
@@ -208,6 +209,7 @@ a {
 
     &__container {
         width: 100%;
+        margin-bottom: 30vh;
 
         &--heading {
             text-align: right;
@@ -253,8 +255,30 @@ a {
         @extend %main_text;
         font-size: 15px;
         line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    & a {
+        color: rgb(0,0,0);
+
+        &:hover {
+            font-weight: bold;
+            color: pink;
+        }
+    }
+
+    & span {
+        @extend %main_text;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-left: 10px;
     }
 }
+
+.item_rev {
+    flex-direction: row-reverse;
+}
+
 
 /*.section {
     width: 100%;
