@@ -123,6 +123,7 @@ a {
     background-color: rgb(255, 255, 255, 0.8);
     padding-top: 40vh;
     overflow-y: scroll;
+    box-sizing: border-box;
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
@@ -168,12 +169,14 @@ a {
         margin-bottom: 15vh;
         padding-top: 10vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-end;
 
         &--img {
             height: 100%;
             max-height: 600px;
+            flex-basis: 400px;
+            overflow: hidden;
 
             & img {
                 height: 100%;
@@ -183,11 +186,15 @@ a {
 
         &--txt {
             margin-left: 30px;
+            width: 40%;
+            flex-basis: 500px;
 
             & h2 {
                 @extend %heading;
                 font-size: 60px;
                 margin-bottom: 30px;
+                max-width: 228px;
+                width: 100%;
             }
 
             & p {
@@ -230,7 +237,7 @@ a {
         margin-right: 20px;
         font-size: 15px;
         line-height: 1.5;
-        width: 158px;
+        min-width: 130px;
     }
 
     &_progress { /*need to remove and add each skill separately, this is just for test*/
@@ -272,7 +279,7 @@ a {
 }
 
 .portfolio_item_img {
-    max-width: 300px;
+    min-width: 300px;
     width: 100%;
 
     & img {
@@ -342,7 +349,6 @@ a {
             width: 80vw;
             max-width: 500px;
             margin-bottom: 5vh;
-            /*when I add this the below shrinks?*/
             display: flex;
             flex-direction: column;
             align-items: center;
