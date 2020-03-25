@@ -3,13 +3,21 @@ a {
     text-decoration: none;
 }
 
+%heading {
+    font-family: 'Prata', serif;
+}
+
+%main_text {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .total {
     background-image: url(../images/portrait.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 1000px;
+    height: auto;
 }
 
 .overlay {
@@ -73,12 +81,46 @@ a {
 
     &__icon--text {
         margin-right: 20px;
+        @extend %main_text;
+        color: rgb(0,0,0);
     }
 }
 
 .content {
+    height: 90vh;
     margin-right: 68px;
     background-color: rgb(255, 255, 255, 0.8);
+    padding-top: 40vh;
+    overflow-y: scroll;
+}
+
+.title {
+    max-width: 900px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40vh;
+
+    &__container {
+        width: 100%;
+        text-align: center;
+
+        & h1 {
+            @extend %heading;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        & h3 {
+            @extend %main_text;
+            font-size: 20px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 7px;
+            }
+
+        }
+    }
 }
 
 /*.section {
