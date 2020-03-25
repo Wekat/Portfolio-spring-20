@@ -203,6 +203,59 @@ a {
     }
 }
 
+.portfolio {
+    @extend .title;
+
+    &__container {
+        width: 100%;
+
+        &--heading {
+            text-align: right;
+
+            & h2 {
+                @extend %heading;
+                font-size: 60px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &--item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            &:not(:last-of-type) {
+                margin-bottom: 15vh;
+            }
+        }
+    }
+}
+
+.portfolio_item_img {
+    max-width: 300px;
+    width: 100%;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.portfolio_item_txt {
+    margin-left: 30px;
+
+    & h4 {
+        @extend %heading;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        @extend %main_text;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
 /*.section {
     width: 100%;
     height: auto;
